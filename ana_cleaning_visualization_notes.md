@@ -1,25 +1,28 @@
-# Ana Sachuk – Cleaning & Visualization Contribution
+# Ana Sachuk – Cleaning, Visualization, and Modeling Contribution
 
 ## Data Cleaning Process
-- Reviewed dataset structure and identified key variables related to price
-- Checked for missing values in important columns (price, year, odometer)
-- Removed or flagged listings with unrealistic prices (e.g., price = 0)
-- Identified extreme outliers in price and mileage
-- Considered removing duplicate listings
-- Reviewed categorical variables (condition, fuel, transmission, manufacturer)
-- Identified columns that may not be useful for modeling
+- Reviewed dataset structure and selected key variables related to price  
+- Checked for missing values across columns  
+- Removed columns with high missing values (condition, cylinders)  
+- Dropped remaining rows with missing values to ensure a clean dataset  
+- Filtered out unrealistic price values (e.g., price < 100 or extremely high values)  
 
 ## Data Visualization Process
-- Planned visualizations to explore relationships:
-  - Price distribution (histogram)
-  - Price vs. year of car
-  - Price vs. mileage (odometer)
-  - Average price by manufacturer
-  - Average price by condition
-- Focused on understanding trends before applying models
+- Created a histogram to visualize the distribution of vehicle prices  
+- Identified strong skewness in price due to extreme outliers  
+- Cleaned price values to produce a more meaningful and interpretable distribution  
+- Used visualization to better understand price behavior before modeling  
 
-## Initial Observations
-- Newer cars tend to have higher prices
-- Lower mileage is associated with higher prices
-- There are significant outliers that could impact model performance
-- Some categorical features likely influence price (e.g., condition)
+## Modeling Process
+- Selected key features for modeling (year as predictor, price as target)  
+- Split data into training and testing sets  
+- Tested multiple models:
+  - Linear Regression  
+  - Decision Tree Regressor  
+  - Ridge Regression  
+- Evaluated model performance using Mean Squared Error (MSE)  
+
+## Key Findings
+- Price distribution is highly skewed without cleaning due to extreme values  
+- Decision Tree model performed better than Linear Regression and Ridge in this setup  
+- Year alone is not a strong predictor of price, suggesting additional features are needed
