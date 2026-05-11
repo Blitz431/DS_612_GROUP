@@ -1,3 +1,4 @@
-vehicles.csv/
+.claude/
+.ipynb_checkpoints/
 vehicles.csv
-vehicles
+*.csv
